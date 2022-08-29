@@ -133,7 +133,7 @@ class ${pageName}Fragment : BaseFragment<${pageName}Presenter>() , ${pageName}Co
     fun newInstance():${pageName}Fragment {
         val fragment = ${pageName}Fragment()
         return fragment
-    }
+        }
     }
 
 
@@ -147,7 +147,7 @@ class ${pageName}Fragment : BaseFragment<${pageName}Presenter>() , ${pageName}Co
     }
 
     override fun initView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?):View{
-        return inflater.inflate(R.layout.${fragmentLayoutName}, container, false);
+        return inflater.inflate(R.layout.${fragmentLayoutName}, container, false)
     }
 
     override fun initData(savedInstanceState:Bundle?) {

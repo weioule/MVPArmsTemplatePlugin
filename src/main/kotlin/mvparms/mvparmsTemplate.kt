@@ -49,7 +49,20 @@ val MVPArmsTemplate
             visible = { needActivity.value }
             help = "Activity 创建之前需要填写 Activity 的布局名,若布局已创建就直接填写此布局名,若还没创建此布局,请勾选下面的单选框"
             constraints = listOf(Constraint.LAYOUT, Constraint.NONEMPTY)
-            suggest = { "${activityToLayout(pageName.value.toLowerCase())}" }
+            suggest = {
+                var pageName = pageName.value
+
+                //布局文件驼峰式命名
+//                var newStr = ""
+//                for (i in 0..pageName.length) {
+//                    if (pageName[i] in 'A'..'Z') {
+//                        newStr += ("_" + pageName[i])
+//                    } else
+//                        newStr += pageName[i]
+//                }
+
+                "${activityToLayout(pageName.toLowerCase())}"
+            }
         }
 
         //是否需要Activity的布局

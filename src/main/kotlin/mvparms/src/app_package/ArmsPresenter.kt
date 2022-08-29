@@ -86,7 +86,7 @@ BasePresenter<${pageName}Contract.Model, ${pageName}Contract.View>(model,rootVie
 
 
     override fun onDestroy() {
-          super.onDestroy();
+          super.onDestroy()
     }
 }
 """
